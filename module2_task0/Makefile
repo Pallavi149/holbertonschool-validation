@@ -8,7 +8,7 @@ run:	## Run application in background
 stop:	## Stop the application
 	pkill awesome-api || true
 
-clean:	## Deletes the binary and log file
+clean:	stop ##the application and deletes the binary and log file
 	rm -rf ./awesome-api
 	rm -f go.mod go.sum awesome-api.log
 
