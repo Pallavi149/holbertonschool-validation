@@ -1,6 +1,4 @@
 build:  ## Compiles source code of application to a binary
-	mkdir awesome-api
-	cd awesome-api
 	go mod init github.com/pallavi149/awesome-api
 	go build -o awesome-api
 
@@ -8,11 +6,11 @@ run:	## Run application in background
 	./awesome-api >./awesome-api.log 2>&1 &
 
 stop:	## Stop the application
-	kill "$(pgrep awesome-api)"
+	pkill awesome-api || true
 
 clean:	## Deletes the binary and log file
 	rm -rf ./awesome-api
-	rm awesome-api.log
+	rm -f go.mod go.sum awesome-api.log
 
 test:	## Testing the project
 	curl http://localhost:9999
