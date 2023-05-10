@@ -15,4 +15,4 @@ test:	## Testing the project
 	curl http://localhost:9999/health
 
 help:	## Prints a list of targets and their use
-	cat Makefile | grep '##' | tr -d '##' | head -n -1	
+	@cat Makefile | grep '##' | tr -d '##' | head -n -1	
