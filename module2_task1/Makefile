@@ -1,7 +1,7 @@
 lint:	##lint should fail when the linter catches and error
 	golangci-lint run ./main.go
 
-build:  ## Compiles source code of application to a binary
+build:  lint ## Compiles source code of application to a binary
 	go build -o awesome-api
 
 run:	## Run application in background
