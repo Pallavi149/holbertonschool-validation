@@ -1,17 +1,17 @@
-#Testing in the Software Development Methodology
+# Testing in the Software Development Methodology
 
 # Prerequisites:
 - Golang should be installed in the environment where the application will be built and run.
 - Basic understanding of Makefile and command-line interface.
 
-##Tooling
--This project needs the following tools / services:
+## Tooling
+- This project needs the following tools / services:
 
--Same tools as previous module
--Golang in v1.15.*
--NPM v7+ with NodeJS v14.* (stable)
--Python 3 with pip module
--golangci-lint
+- Same tools as previous module
+- Golang in v1.15.*
+- NPM v7+ with NodeJS v14.* (stable)
+- Python 3 with pip module
+- golangci-lint
 
 ## Project Lifecycle:
 - `build`: compile the source code of the application to a binary named `awesome-api` using the command `go build`.
