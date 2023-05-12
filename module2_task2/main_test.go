@@ -31,14 +31,13 @@ func Test_HelloHandler(t *testing.T) {
       body:         "Hello Rosalind Franklin!",
     },
 		{
-    
 			name:         "Eps Rarima",
 			queryString:  "name=",
 			responseCode: 400,
 		},
 		{
 			name:         "Jonathan Clus",
-			queryString:  "name=You are the best!",
+			queryString:  "name=You are the best",
 			responseCode: 200,
 			body:         "Hello You are the best!",
 		},
