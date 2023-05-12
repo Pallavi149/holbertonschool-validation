@@ -24,22 +24,22 @@ func Test_HelloHandler(t *testing.T) {
       responseCode: 200,
       body:         "Hello Grace Hopper!",
     },
-    {
+		{
       name:         "Rosalind Franklin",
       queryString:  "name=Rosalind Franklin",
       responseCode: 200,
       body:         "Hello Rosalind Franklin!",
     },
 		{
-			name:         "Eps Rarima",
+			name:         "Bob Marley",
 			queryString:  "name=",
 			responseCode: 400,
 		},
 		{
-			name:         "Jonathan Clus",
-			queryString:  "name=You are the best",
+			name:         "Chrissie Hynde",
+			queryString:  "name=I got you babe",
 			responseCode: 200,
-			body:         "Hello You are the best!",
+			body:         "Hello I got you babe!",
 		},
 		{
 			name:         "Jimmy Recard",
