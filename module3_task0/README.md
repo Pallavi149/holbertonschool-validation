@@ -55,4 +55,4 @@ Currently making use of Github action to:
 
 It is triggered:
 
--   Each time new code is pushed to the repository
+-   The workflow should run every day at 1 pm
