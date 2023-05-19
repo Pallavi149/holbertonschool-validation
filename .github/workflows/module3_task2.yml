@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: setup
-        run: bash module3_task1/setup.sh
+        run: bash module3_task2/setup.sh
       - name: Build and create package
         run: |
           cd module3_task2
