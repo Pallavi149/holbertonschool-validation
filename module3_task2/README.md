@@ -16,7 +16,7 @@
 
 - An HTML5-compliant web browser (Firefox, Chrome, Opera, Safari, Edge, etc.)
 - A free account on [GitHub](https://github.com/), referenced as `GitHub Handle`
-- A shell terminal with bash, zsh or ksh, 
+- A shell terminal with bash, zsh or ksh,
   including the standard Unix toolset (ls, cd, etc.)
 - [GNU](https://www.gnu.org/software/make/) Make in version 3.81+
 - Git (command line) in version 2+
@@ -54,7 +54,7 @@ Currently making use of Github action to:
 
 - Clone the repository
 - Position self in the correct directory and execute the command `make help`
-  to validate that the Makefile is present, 
+  to validate that the Makefile is present,
   and implement the help target check.
 
 It is triggered:
