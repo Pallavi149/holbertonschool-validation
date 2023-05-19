@@ -8,7 +8,7 @@ post:   ## Creates a new blog post whose name and title come from env variables
 	hugo new posts/$(POST_NAME).md
 	sed -i '2s/.*/title: "$(POST_TITLE)"/' content/posts/$(POST_NAME).md
 
-pacakage:	## Creates a zip file containing binary and dist/ directory
+package:	## Creates a zip file containing binary and dist/ directory
 	make build
 	zip awesome-website.zip dist/index.html
 
