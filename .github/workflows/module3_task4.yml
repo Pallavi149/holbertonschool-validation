@@ -2,6 +2,8 @@ name: module3_task3
 permissions:
   contents: write
 on:
+  pull_request:
+    types: [opened, reopened, synchronize]
   push:
     branches: main
   schedule:
