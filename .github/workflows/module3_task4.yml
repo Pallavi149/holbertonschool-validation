@@ -1,4 +1,4 @@
-name: module3_task3
+name: module3_task4
 permissions:
   contents: write
 on:
@@ -9,25 +9,25 @@ on:
   schedule:
     - cron: '0 13 * * *'
 jobs:
-  module3_task3:
+  module3_task4:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: setup
-        run: bash module3_task3/setup.sh
+        run: bash module3_task4/setup.sh
         shell: bash
       - name: Build and create package
         run: |
-          cd module3_task3
+          cd module3_task4
           make package
       - name: Lint
         run: |
-          cd module3_task3
+          cd module3_task4
           make lint
       - name: Integration-tests
         run: |
-          cd module3_task3
+          cd module3_task4
           make build
           make validate
           make integration-tests
@@ -38,11 +38,11 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: upload-package
-          path: module3_task3/awesome-website.zip
+          path: module3_task4/awesome-website.zip
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: 1.0.0
           files: |
-            module3_task3/awesome-website.zip
-            module3_task3/DEPLOY.md
+            module3_task4/awesome-website.zip
+            module3_task4/DEPLOY.md
