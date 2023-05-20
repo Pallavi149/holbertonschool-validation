@@ -1,4 +1,4 @@
-name: Release Drafter
+name: release-drafter
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 jobs:
-  update_release_draft:
+  release-drafter:
     permissions:
       contents: write
       pull-requests: write
