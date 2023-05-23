@@ -3,7 +3,7 @@ build:  ## Builds website
 	make hugo-build
 
 golang-build:  ## Runs go build in docker conatainer
-	docker run --rm -v .:/module4_task0 -w /module4_task0 golang:1.15.8-buster go build -v
+	docker run --rm -v .:/module4_task0 -w /module4_task0 golang:1.15.8-buster go build
 hugo-build:  ## Generates website from markdown and configuration files in dist/ directory
 	hugo
 clean:  ## Cleans up the content of the dist/ directory
