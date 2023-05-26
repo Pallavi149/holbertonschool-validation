@@ -114,7 +114,7 @@ A release is created when a tag is supplied on commit
 | yamllint | Lints the `github-workflow.yml` file.|
 | markdownlint | lints the `README.md` and `DEPLOY.md` files |
 | package | creates a zip archive of the the latest build and |
-          | stores it under `awesome-website.zip` |
+|          | stores it under `awesome-website.zip` |
 |unit-tests| runs multiple make recipes. |
 | integration-tests | runs make post and make build |
 | validate | prints out the pwd |
