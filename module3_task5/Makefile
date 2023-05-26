@@ -14,7 +14,6 @@ package:	## Creates a zip file containing binary and dist/ directory
 
 unit-tests:	## Tests various make recipes
 	make package
-	make clean
 
 integration-tests:	## Start a server and check localhost URL
 	hugo
