@@ -3,6 +3,7 @@ permissions:
   id-token: write
   contents: write
   pull-requests: write
+  deployments: write
 on:
   pull_request:
     types: [opened, reopened, synchronize]
