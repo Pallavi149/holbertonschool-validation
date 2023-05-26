@@ -1,6 +1,8 @@
 name: module4_task0
 permissions:
+  id-token: write
   contents: write
+  pull-requests: write
 on:
   pull_request:
     types: [opened, reopened, synchronize]
