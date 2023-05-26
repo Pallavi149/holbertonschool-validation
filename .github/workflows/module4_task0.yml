@@ -4,6 +4,7 @@ permissions:
   contents: write
   pull-requests: write
   deployments: write
+  statuses: write
 on:
   pull_request:
     types: [opened, reopened, synchronize]
