@@ -32,7 +32,6 @@ jobs:
           make validate
           make integration-tests
           make unit-tests
-          make clean
       - name: Archive package
         if: ${{ success() }}
         uses: actions/upload-artifact@v3
