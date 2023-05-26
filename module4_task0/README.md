@@ -104,19 +104,18 @@ A release is created when a tag is supplied on commit
 
 | Command  | Tasks                                  |
 | -------- | ---------------------------------------|
-| build    | Generate the website from the markdown and
-             configuration files in the directory dist/.|
+| build    | Generate the website from the markdown and |
+|          | configuration files in the directory dist/.|
 | clean    | Cleanup the content of the directory dist/|
-| post     | Create a new blog post whose filename and title come from the environment
-             variables POST_TITLE and POST_NAME. |
+| post     | Create a new blog post whose filename and title come from the environment |
+|          | variables POST_TITLE and POST_NAME. |
 | lint     | Lints the shell script `setup.sh` and on success runs `make yamllint`
-             and lints markdown FILES                |
+|          | and lints markdown FILES                |
 | yamllint | Lints the `github-workflow.yml` file.|
 | markdownlint | lints the `README.md` and `DEPLOY.md` files |
-| package | creates a zip archive of the the latest build and
-            stores it under `awesome-website.zip` |
+| package | creates a zip archive of the the latest build and |
+          | stores it under `awesome-website.zip` |
 |unit-tests| runs multiple make recipes. |
 | integration-tests | runs make post and make build |
 | validate | prints out the pwd |
 | Help     | Print out all build recipes. |
-
