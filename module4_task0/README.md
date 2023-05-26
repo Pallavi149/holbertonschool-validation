@@ -45,7 +45,7 @@ It is triggered when:
 
 ## Build Workflow
 
-The actions performed at midnight and every time the repo is pushed is:
+The actions performed at 1:00pm and every time the repo is pushed is:
 
 - Clone the repo
 - Run setup.sh to download and install the missing packages
@@ -106,7 +106,7 @@ A release is created when a tag is supplied on commit
 | -------- | ---------------------------------------|
 | build    | Generate the website from the markdown and configuration files in the directory dist/.|
 | clean    | Cleanup the content of the directory dist/|
-| p[ost     | Create a new blog post whose filename and title come from the environment variables POST_TITLE and POST_NAME. |
+| post     | Create a new blog post whose filename and title come from the environment variables POST_TITLE and POST_NAME. |
 | lint     | Lints the shell script `setup.sh` and on success runs `make yamllint` and lints markdown FILES                |
 | yamllint | Lints the `github-workflow.yml` file.|
 | markdownlint | lints the `README.md` and `DEPLOY.md` files |
