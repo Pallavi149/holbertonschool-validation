@@ -3,7 +3,7 @@ build:  ## Builds website
 	make hugo-build
 
 golang-build:  ## Runs go build in docker conatainer
-	docker run --rm -v ${PWD}/:/module4_task0 -w /module4_task0 golang:1.15.8-buster go build -v
+	docker run --rm -v ${PWD}/:/app -w /app golang:1.15.8-buster go build -v
 hugo-build:  ## Generates website from markdown and configuration files in dist/ directory
 	hugo
 clean:  ## Cleans up the content of the dist/ directory
@@ -18,10 +18,10 @@ package:	## Creates a zip file containing binary and dist/ directory
 	zip awesome-website.zip dist/index.html
 
 unit-tests:	## Tests various make recipes
-	docker run --rm -v ${PWD}/:/module4_task0 -w /module4_task0 golang:1.15.8-buster go test -v  -short -coverprofile=coverage-units.out
+	docker run --rm -v ${PWD}/:/app -w /app golang:1.15.8-buster go test -v  -short -coverprofile=coverage-units.out
 
 integration-tests:	## Start a server and check localhost URL
-	docker run --rm -v ${PWD}/:/module4_task0 -w /module4_task0 golang:1.15.8-buster go test -v -coverprofile=coverage-integrations.out
+	docker run --rm -v ${PWD}/:/app -w /app golang:1.15.8-buster go test -v -coverprofile=coverage-integrations.out
 
 validate:	## Checks the current working directory
 	pwd
