@@ -18,12 +18,10 @@ package:	## Creates a zip file containing binary and dist/ directory
 	zip awesome-website.zip dist/index.html
 
 unit-tests:	## Tests various make recipes
-	make package
-	make clean
+	docker run --rm -v ${PWD}/:/module4_task0 -w /module4_task0 golang:1.15.8-buster go test -v  -short -coverprofile=coverage-units.out
 
 integration-tests:	## Start a server and check localhost URL
-	make build
-	ls dist/
+	docker run --rm -v ${PWD}/:/module4_task0 -w /module4_task0 golang:1.15.8-buster go test -v -coverprofile=coverage-integrations.out
 
 validate:	## Checks the current working directory
 	pwd
