@@ -22,7 +22,11 @@ post:   ## Creates a new blog post whose name and title come from env variables
 
 package:	## Creates a zip file containing binary and dist/ directory
 	make build
-	$(DOCKER) zip awesome-website.zip dist/index.html -v
+	$(DOCKER) zip -FSr awesome-website.zip dist/ awesome-api
+
+test:  ## Runs unit test and integration test
+	make unit-tests
+	make integration-tests
 
 unit-tests:	## Tests various make recipes
 	$(DOCKER) go test -v  -short -coverprofile=coverage-units.out
@@ -34,7 +38,7 @@ validate:	## Checks the current working directory
 	pwd
 
 lint:	## Apply lint to README and DEPLOY files
-	$(DOCKER) markdownlint README.md DEPLOY.md -v
+	$(DOCKER) markdownlint README.md DEPLOY.md
 
 stop:	## Stop the application
 	pkill awesome-api || true
